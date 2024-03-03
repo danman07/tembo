@@ -640,9 +640,18 @@ http://www.templatemo.com/tm-515-eatery
   /*---------------------------------------
       TESTIMONIAL             
   -----------------------------------------*/
+  /* Hide the testimonial section by default */
+#testimonial {
+  display: none;
+}
 
-/*  
+/* Media query for mobile devices */
+@media screen and (max-width: 991px) {
+  /* Display the testimonial section only on mobile devices */
+  #testimonial {
+      display: block;
 
+  }
   #testimonial .owl-dots {
     background-position: inherit;
     background-repeat: no-repeat;
@@ -651,10 +660,7 @@ http://www.templatemo.com/tm-515-eatery
   
     justify-content: center;
   }
-#testimonial {
-    background: url('../images/testimonial-bg.jpg') center center no-repeat;
-    background-size: cover;
-  }
+
   
   #testimonial .owl-theme .owl-dots .owl-dot,
   #testimonial .owl-theme .owl-dots .owl-dot span {
@@ -677,9 +683,10 @@ http://www.templatemo.com/tm-515-eatery
 
   #testimonial p {
     color: #d9d9d9;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 35px;
-  }
+    font-family: 'Montserrat', 'Montserrat', sans-serif;
+    }
 
   .tst-author {
     margin-top: 20px;
@@ -687,13 +694,111 @@ http://www.templatemo.com/tm-515-eatery
 
   .tst-author h4,
   .tst-author span {
-    color: #b2b2b2;
+    color: #dbd6d6;
   }
 
   .tst-author span {
     margin-left: 5px;
   }
-*/
+
+
+
+}
+
+/*-- testimonial web view ---*/
+
+/* Hide the section on smaller screens */
+#allu {
+  display: none;
+}
+
+/* Media query for laptops and larger screens */
+@media screen and (min-width: 992px) {
+  /* Display the section on laptops and larger screens */
+  #allu {
+      display: block;
+  }
+  #allu {
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  .allu-thumb {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .allu-info {
+    padding: 10px 30px 20px 30px;
+  }
+  
+  .allu-thumb .allu-hover {
+    position: absolute;
+    background: #1c1c1c;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.5s 0.2s;
+  }
+  
+  .allu-thumb:hover .allu-hover {
+    opacity: 0.95;
+    transition-delay: 0.3s;
+    transform: translateY(0);
+  }
+  
+  .allu-thumb img {
+    transition: 0.5s 0.2s;
+  }
+  
+  .allu-thumb:hover img {
+    transform: scale(1.2);
+  }
+  
+  .allu-thumb .social-icon li a {
+    background: #201e1e;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: #d9d9d900;
+    font-size: 20px;
+    margin: 15px 5px 0 5px;
+  }
+  
+  .allu-thumb .allu-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+  
+  .allu-item h4 {
+    color: #ffffff;
+  }
+  
+  .allu-info p {
+    color: #0c0b0b85;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+  
+    
+
+}
+
 
 
   /*---------------------------------------
